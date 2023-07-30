@@ -23,16 +23,20 @@ nvidia-smi
 
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
-sh ./Miniconda3-latest-Linux-x86_64.sh
+sudo sh ./Miniconda3-latest-Linux-x86_64.sh
 
 # don't change. As of 7/25/2023, pytorch has some issues with python 3.11. Just stay with 3.10
-conda create -n python310 anaconda python=3.10
-conda activate python310
+conda create -n py310 anaconda python=3.10
+conda activate py310
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+sudo apt install python3-distutils
 
 git clone https://github.com/artidoro/qlora.git
 git clone https://github.com/ggerganov/llama.cpp.git
+git clone https://huggingface.co/datasets/zxbsmk/webnovel_cn
 
-cd qlora
+
+cd qlora`
 pip install -r requirements.txt
 
