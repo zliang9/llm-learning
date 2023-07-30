@@ -12,14 +12,14 @@ nvidia-smi
 
 # if not formatted, run the below command to format
 # mkfs.ext4 -m 0 -E lazy_itable_init=0,lazy_journal_init=0,discard /dev/{your_disk_name}
-mkdir -p /mnt/disk
-mount -o auto /dev/{your_disk_name} /mnt/disk
-chmod a+w /mnt/disk
+# mkdir -p /mnt/disk
+# mount -o auto /dev/{your_disk_name} /mnt/disk
+# chmod a+w /mnt/disk
 
 # LOTS of stuff will be in ~/.cache
-ln -s /mnt/disk/.cache /root/.cache
+# ln -s /mnt/disk/.cache /root/.cache
 
-cd /mnt/disk
+# cd /mnt/disk
 
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
